@@ -25,8 +25,6 @@
     --color-orange-500: #f6efed;
 
     /* Texto */
-
-    --color-font-main: #000000;
     --color-font-secondary: #494949;
 }
 
@@ -57,12 +55,20 @@ header {
 
 .logo img {
     width: 60px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.eventum{
+    background: -webkit-linear-gradient(45deg, orange, purple 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
 }
 
 .logo h1 {
-    background: -webkit-linear-gradient(45deg, var(--color-orange-900), var(--color-purple-800));
-    -webkit-background-clip: text;
-    color: transparent;
+    cursor: default;
+    user-select: none;
 }
 
 nav a {
@@ -76,29 +82,28 @@ nav a {
 nav a:first-of-type {
     background: white;
     color: black;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 nav a:last-of-type {
     background: black;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 nav a:last-of-type:hover {
-    background: rgb(24, 24, 24);
-    font-size: 1.1rem;
+    background: rgb(36, 36, 36);
 }
 
 nav a:first-of-type:hover {
-    background: rgb(247, 247, 247);
-    font-size: 1.1rem;
+    background: rgb(235, 235, 235);
 }
 
 /* Hero */
 
 .hero-section {
-    background-image: url("../assets/bg-1.png");
+    /* background-image: url(../assets/bg-1.png); */
+    background: linear-gradient(white, var(--color-purple-500), var(--color-blue-500), white);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,13 +212,8 @@ nav a:first-of-type:hover {
 /* Features Section */
 
 .features-section {
-    background-image: url("../assets/bg-2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 50px;
     min-height: 100vh;
-
-    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,6 +226,7 @@ nav a:first-of-type:hover {
 
 .features-grid {
     padding: 100px;
+    grid-auto-columns: 125px;
     display: grid;
     gap: 15px;
     grid-template-areas:
@@ -234,19 +235,59 @@ nav a:first-of-type:hover {
 }
 
 .feature-card {
-    border: 1.5px white solid;
-    border-radius: 10px;
+    background-image: url("../assets/bg-2.png");
+
+    box-shadow:
+        inset 5px 5px 10px #c8c8c8,
+        inset -5px -5px 10px #ffffff;
     padding: 20px;
-    background-color: #ffffff49;
-    backdrop-filter: blur(5px);
-}
-
-.feature-card img {
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-/* Bento Grid */
-
-.area1 img {
-    width: 400px;
+.feature-card:hover {
+    transform: scale(1.02);
 }
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-info h2{
+    font-size: 2rem;
+}
+
+.card-info p{
+    font-size: 1.8rem;
+}
+
+/* Ideas Section */
+
+.ideas-section{
+    background: linear-gradient(white, var(--color-orange-800), var(--color-purple-500), white);
+    min-height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ideas-section h1{
+    font-size: 3rem;
+}
+
+.ideas{
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+    "idea1 idea2 idea3"
+    "idea4 idea5 idea6";
+}
+
+.idea-card{
+    border: black 1px solid;
+}
+
