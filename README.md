@@ -25,7 +25,9 @@
 
 ## 👤 Roles en la app
 - **Administrador**: Tiene acceso a todas las funcionalidades del sistema.
-- **Host (anfitrión)**: Crea y gestiona el evento.
+- **Moderador**: Moderación de la plataforma, encargado de eliminar eventos inapropiados.
+- **Anfitrión**: Crea y gestiona el evento.
+- **Coanfitrión**: Ayuda con la gestión del evento
 - **Invitados**: Pueden confirmar asistencia, participar en encuestas, registrarse para llevar elementos, y pagar su parte.
 
 ## 🎯 Objetivo del proyecto
