@@ -35,6 +35,9 @@
     padding: 0;
     margin: 0;
     background-color: transparent;
+}
+
+body{
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -271,14 +274,15 @@ nav a:first-of-type:hover {
 /* Ideas Section */
 
 .ideas-section{
-    background: linear-gradient(white, var(--color-orange-900), var(--color-purple-500));
+    background: linear-gradient(white, var(--color-orange-900), var(--color-purple-500), rgb(255, 255, 255));
     min-height: 100vh;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
+    padding: 50px;
 }
 
 .ideas-section h1{
@@ -306,5 +310,27 @@ nav a:first-of-type:hover {
 .idea-card img{
     border-radius: 10px;
     width: 250px;
+    border: white 1px solid;
 }
 
+.idea-card-info{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Footer */
+
+footer{
+    margin: 20px;
+    background: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section{
+
+}
