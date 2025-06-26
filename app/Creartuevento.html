@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Evento - Eventum</title>
+  <link rel="stylesheet" href="./css/estilos_evento.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Crear nuevo evento</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="titulo">Título del evento:</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="lugar">Lugar:</label>
+      <input type="text" id="lugar" name="lugar" required>
+
+      <label for="presupuesto">Presupuesto estimado:</label>
+      <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
+
+      <label for="acompañantes">Número de acompañantes permitidos:</label>
+      <input type="number" id="acompañantes" name="acompañantes" min="0">
+
+      <label for="portada">Imagen de portada:</label>
+      <input type="file" id="portada" name="portada" accept="image/*">
+
+      <button type="submit">Crear evento</button>
+    </form>
+  </div>
+</body>
+</html>

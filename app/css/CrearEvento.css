@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: #0b2a43;
+  --color-success: #2f436a;
+  --color-info: #65639d;
+  --color-warning: #f6c23e;
+  --color-text-main: #212529;
+  --color-text-secondary: #6c757d;
+  --color-bg: #f8f9fc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#sidebar-wrapper {
+  background-color: white;
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.sidebar-heading {
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  border-bottom: 1px solid #eaeaea;
+}
+
+.list-group {
+  width: 15rem;
+}
+
+.list-group-item {
+  color: #333;
+  font-weight: 500;
+  border: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0;
+  color: var(--color-primary);
+}
+
+.list-group-item.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  padding: 2rem;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.card-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.card-body .text-xs {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-body .text-uppercase {
+  text-transform: uppercase;
+}
+
+.card-body .font-weight-bold {
+  font-weight: 700;
+}
+
+.card.border-left-primary {
+  border-left: 0.25rem solid var(--color-primary);
+}
+
+.card.border-left-success {
+  border-left: 0.25rem solid var(--color-success);
+}
+
+.card.border-left-info {
+  border-left: 0.25rem solid var(--color-info);
+}
+
+.card.border-left-warning {
+  border-left: 0.25rem solid var(--color-warning);
+}
+
+.table thead {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
