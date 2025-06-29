@@ -226,10 +226,10 @@ nav a:first-of-type:hover {
 
 .features-section h1 {
     font-size: 3rem;
+    margin-bottom: 60px;
 }
 
 .features-grid {
-    padding: 100px;
     grid-auto-columns: 125px;
     display: grid;
     gap: 15px;
@@ -367,7 +367,7 @@ footer{
     }
     
     h2{
-        font-size: 1.5rem !important;
+        font-size: 1.3rem !important;
     }
     
     p{
