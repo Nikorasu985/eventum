@@ -212,6 +212,7 @@ nav a:first-of-type:hover {
     color: black;
 }
 
+
 /* Features Section */
 
 .features-section {
@@ -233,7 +234,7 @@ nav a:first-of-type:hover {
     display: grid;
     gap: 15px;
     grid-template-areas:
-        "area1 area1 area1 area2 area2 area2 area3   area3 area3"
+        "area1 area1 area1 area2 area2 area2 area3 area3 area3"
         "area5 area5 area5 area5 area4 area4 area4 area4 area4";
 }
 
@@ -303,7 +304,7 @@ nav a:first-of-type:hover {
 }
 
 .ideas-video video{
-    width: 800px;
+    width: 40vw;
     border-radius: 10px;
     border: white 1px solid;
 }
@@ -311,6 +312,7 @@ nav a:first-of-type:hover {
 .ideas{
     display: grid;
     gap: 15px;
+    grid-auto-columns: 1fr;
     grid-template-areas: 
     "idea1 idea2 idea3"
     "idea4 idea5 idea6";
@@ -355,6 +357,73 @@ footer{
     justify-content: space-around;
 }
 
-.footer-section{
 
+/* Responsive */
+
+@media (max-width: 768px) {
+    
+    /* Hero Section */
+    
+    .hero-section{
+        flex-direction: column;
+        padding: 40px;
+        gap: 20px;
+    }
+    
+    .hero-info{
+        width: 100% ;
+    }
+
+    @keyframes aparecer-imagen{
+        0%{
+        transform: translateX(200%);
+        filter: blur(5px);
+    }
+
+    100%{
+        transform: translateX(0);
+        filter: blur(0);
+    }
+    }
+
+    /* Features Section */
+
+    .features-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5";
+    }
+
+    .feature-card{
+        width: 90vw;
+    }
+
+    /* Ideas Section */
+
+    .ideas-section{
+        padding: 40px;
+    }
+
+    .ideas-video video{
+        width: 90vw;
+    }
+
+    .ideas-content{
+        flex-direction: column;
+    }
+
+    .ideas{
+        grid-template-areas: 
+        "idea1"
+        "idea2"
+        "idea3"
+        "idea4"
+        "idea5"
+        "idea6";
+    }
 }
