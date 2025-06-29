@@ -453,11 +453,8 @@ footer{
 
     .ideas{
         grid-template-areas: 
-        "idea1"
-        "idea2"
-        "idea3"
-        "idea4"
-        "idea5"
-        "idea6";
+        "idea1 idea2"
+        "idea3 idea4"
+        "idea5 idea6";
     }
 }
