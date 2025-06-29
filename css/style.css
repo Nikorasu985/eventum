@@ -361,17 +361,46 @@ footer{
 /* Responsive */
 
 @media (max-width: 768px) {
+
+    h1{
+        font-size: 1.5rem !important;
+    }
     
+    h2{
+        font-size: 1.5rem !important;
+    }
+    
+    p{
+        font-size: 1rem !important;
+    }
+    
+    
+    /* Header */
+
+    .logo h1{
+        font-size: 1.3rem;
+    }
+
     /* Hero Section */
     
     .hero-section{
         flex-direction: column;
-        padding: 40px;
-        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        gap: 40px;
     }
     
     .hero-info{
-        width: 100% ;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-info h1{
+        font-size: 1.5rem;
+    }
+
+    .hero-img img{
+        width: 90vw;
     }
 
     @keyframes aparecer-imagen{
@@ -388,6 +417,10 @@ footer{
 
     /* Features Section */
 
+    .features-section h1{
+        text-align: center;
+    }
+
     .features-grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -402,6 +435,7 @@ footer{
     .feature-card{
         width: 90vw;
     }
+
 
     /* Ideas Section */
 
