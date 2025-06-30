@@ -319,11 +319,10 @@ nav a:first-of-type:hover {
 .idea-card{
     border: 1.5px white solid;
     border-radius: 10px;
-    padding: 20px;
     background-color: #ffffff34;
     backdrop-filter: blur(5px);
 
-    padding: 20px;
+    padding: 15px;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
