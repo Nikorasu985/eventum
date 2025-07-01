@@ -230,6 +230,7 @@ nav a:first-of-type:hover {
 }
 
 .features-grid {
+    padding: 40px;
     grid-auto-columns: 1fr;
     display: grid;
     gap: 15px;
