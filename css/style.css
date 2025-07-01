@@ -68,6 +68,7 @@ header {
 
 .eventum{
     background: -webkit-linear-gradient(45deg, orange, purple 80%);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     font-weight: 700;
@@ -356,7 +357,7 @@ footer{
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     h1{
         font-size: 1.5rem !important;
@@ -418,7 +419,7 @@ footer{
     }
 
     .features-grid{
-        padding: 0;
+        padding: 0 !important;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
@@ -426,7 +427,7 @@ footer{
         "area2"
         "area3"
         "area4"
-        "area5";
+        "area5" !important;
     }
 
     .feature-card{
@@ -449,6 +450,78 @@ footer{
     }
 
     .ideas{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 5px;
     }
+    .idea-card{
+        width: 45vw;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 1070px) {
+    
+    /* Hero Section */
+    
+    .hero-section{
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        gap: 40px;
+    }
+    
+    .hero-info{
+        width: 100%;
+    }
+
+    .hero-img img{
+        width: 90vw;
+    }
+
+    @keyframes aparecer-imagen{
+        0%{
+        transform: translateX(200%);
+        filter: blur(5px);
+    }
+
+    100%{
+        transform: translateX(0);
+        filter: blur(0);
+    }
+    }
+
+    /* Features Section */
+
+    .features-section h1{
+        text-align: center;
+    }
+
+    .features-grid{
+        padding: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "area1 area1 area1 area1 area2 area2 area2 area2"
+        "area3 area3 area3 area3 area3 area3 area3 area3"
+        "area5 area5 area5 area5 area4 area4 area4 area4";
+    }
+
+    /* Ideas Section */
+
+    .ideas-section{
+        padding: 40px;
+    }
+
+    .ideas-video video{
+        width: 90vw;
+    }
+
+    .ideas-content{
+        flex-direction: column;
+    }
+
+    .ideas{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
