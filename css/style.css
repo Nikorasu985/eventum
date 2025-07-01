@@ -28,6 +28,10 @@
     --color-font-secondary: #494949;
 }
 
+*{
+    border: red 1px solid;
+}
+
 *,
 ::after,
 ::before {
@@ -414,6 +418,7 @@ footer{
     }
 
     .features-grid{
+        padding: 0;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
