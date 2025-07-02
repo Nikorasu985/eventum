@@ -384,6 +384,10 @@ footer{
         width: 100%;
     }
 
+    .hero-info h1{
+        font-size: 2rem;
+    }
+
     .hero-img img{
         width: 90vw;
     }
@@ -439,15 +443,15 @@ footer{
 @media (max-width: 767px) {
 
     h1{
-        font-size: 1.4rem;
+        font-size: 1.4rem !important;
     }
     
     h2{
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
     
     p{
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     
     
@@ -534,10 +538,16 @@ footer{
 
     .ideas{
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 5px;
+        gap: 10px;
     }
     .idea-card{
         width: 45vw;
         overflow: auto;
+    }
+}
+
+@media (max-width: 340px) {
+    .logo h1{
+        font-size: 0 !important;
     }
 }
