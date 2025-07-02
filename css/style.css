@@ -235,6 +235,7 @@ nav a:first-of-type:hover {
 }
 
 .features-grid {
+    width: 85vw;
     padding: 40px;
     grid-auto-columns: 1fr;
     display: grid;
