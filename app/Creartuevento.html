@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crear Evento - Eventum</title>
   <link rel="stylesheet" href="./css/estilos_evento.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Crear nuevo evento</h2>
-    <form action="../error505.html" enctype="multipart/form-data">
-      <label for="titulo">Título del evento:</label>
-      <input type="text" id="titulo" name="titulo" required>
+  <div class="container">
+    <div class="left-panel">
+      <h1>Organiza tu evento con Eventum</h1>
+      <p>Facilita la coordinación, comparte ideas y controla tu presupuesto de forma colaborativa.</p>
+    </div>
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Nuevo Evento</h2>
+        <div class="tags">
+          <span class="tag">🎉 Fiesta</span>
+          <span class="tag">🎶 Música</span>
+          <span class="tag">🍽 Cena</span>
+        </div>
+      </div>
+      <form action="../error505.html" class="event-form">
+        <label class="image-upload">
+          <span>📷 Imagen de portada del evento</span>
+          <input type="file" required>
+        </label>
+        <input type="text" placeholder="Título del evento" required>
+        <label for="">Fecha de Inicio</label>
+        <input type="date" required>
+        <label for="">Fecha de Fin</label>
+         <input type="date" required>
+         <label for="">Hora de Inicio</label>
+        <input type="time" required>
+        <label for="">Hora de Fin</label>
+        <input type="time" required>
+        <input type="text" placeholder="Lugar del evento" required>
 
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        <div class="budget-selector">
+          <button type="button" id="toggleBudget">Presupuesto: Definido</button>
+        </div>
+        <div class="budget-inputs">
+          <input type="number" id="budgetDefined" placeholder="Presupuesto definido (COP)" required>
+        </div>
 
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" name="fecha" required>
-
-      <label for="hora">Hora:</label>
-      <input type="time" id="hora" name="hora" required>
-
-      <label for="lugar">Lugar:</label>
-      <input type="text" id="lugar" name="lugar" required>
-
-      <label for="presupuesto">Presupuesto estimado:</label>
-      <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
-
-      <label for="acompañantes">Número de acompañantes permitidos:</label>
-      <input type="number" id="acompañantes" name="acompañantes" min="0">
-
-      <label for="portada">Imagen de portada:</label>
-      <input type="file" id="portada" name="portada" accept="image/*">
-
-      <button type="submit">Crear evento</button>
-    </form>
+        <textarea placeholder="Descripción del evento (opcional)"></textarea>
+        <div class="options">
+          <label><input type="checkbox"> Permitir que los invitados traigan acompañante</label>
+        </div>
+        <button type="submit">Crear Evento</button>
+      </form>
+    </div>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBudget');
+    const budgetInputsDiv = document.querySelector('.budget-inputs');
+
+    let showingDefined = true;
+
+    toggleBtn.addEventListener('click', () => {
+      if (showingDefined) {
+        budgetInputsDiv.innerHTML = '<input type="number" id="budgetSuggested" placeholder="Presupuesto sugerido por los invitados (COP)" required>';
+        toggleBtn.textContent = 'Presupuesto: Sugerido';
+      } else {
+        budgetInputsDiv.innerHTML = '<input type="number" id="budgetDefined" placeholder="Presupuesto definido (COP)" required>';
+        toggleBtn.textContent = 'Presupuesto: Definido';
+      }
+      showingDefined = !showingDefined;
+    });
+  </script>
 </body>
 </html>
