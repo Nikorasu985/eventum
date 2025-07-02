@@ -135,7 +135,7 @@ nav a:first-of-type:hover {
     border: 1.5px white solid;
     border-radius: 10px;
     padding: 20px;
-    background-color: #ffffff34;
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
 
     padding: 40px;
@@ -359,13 +359,14 @@ footer{
 }
 
 .footer-section{
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border: 1px white solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    backdrop-filter: blur(5px);
 }
 
 .footer-section h2{
