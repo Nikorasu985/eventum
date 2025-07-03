@@ -508,7 +508,6 @@ footer{
     }
 
     .features-grid{
-        padding: 40px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
@@ -626,9 +625,6 @@ footer{
         "area5" !important;
     }
 
-    .feature-card{
-        width: 90vw;
-    }
 
 
     /* Ideas Section */
