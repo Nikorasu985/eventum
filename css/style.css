@@ -535,6 +535,12 @@ footer{
         grid-template-columns: repeat(3, 1fr);
     }
 
+    /* How To Section */
+
+    .ht-content{
+        width: 90vw;
+    }
+
     /* Footer */
 
     footer{
