@@ -25,7 +25,7 @@
     --color-orange-500: #f6efed;
 
     /* Texto */
-    --color-font-secondary: #494949;
+    --color-font-secondary: #292929;
 }
 
 /* *{
@@ -43,6 +43,10 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    color: var(--color-font-secondary);
 }
 
 /* Header */
@@ -345,6 +349,67 @@ nav a:first-of-type:hover {
     gap: 10px;
 }
 
+/* How To Section */
+
+
+.how-to-section{
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.how-to-section h1{
+    font-size: 3rem;
+}
+
+.ht-content{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 70vw;
+}
+
+
+.ht-card{
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(#fff, #fff) padding-box, /* Fondo interior */
+                linear-gradient(45deg, orange, purple) border-box; /* Borde degradado */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.ht-card img{
+    border-radius: 10px;
+    width: 50%;
+}
+
+.ht-card-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.even{
+    text-align: end;
+    flex-direction: row-reverse;
+}
+
+.ht-card-content h2{
+    font-size: 2rem;
+}
+
+.ht-card-content p{
+    font-size: 1.3rem;
+}
+
 /* Footer */
 
 footer{
@@ -581,6 +646,23 @@ footer{
     .idea-card{
         width: 45vw;
         overflow: auto;
+    }
+
+    /* How To Section */
+
+    .ht-card{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .ht-card-content{
+        width: 100%;
+    }
+
+    .ht-card img{
+        width: 100%;
     }
 
     /* Footer */
