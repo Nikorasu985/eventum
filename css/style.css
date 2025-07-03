@@ -410,6 +410,17 @@ nav a:first-of-type:hover {
     font-size: 1.3rem;
 }
 
+/* Final */
+
+.final{
+    min-height: 50vh;
+    font-size: 2rem !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Footer */
 
 footer{
@@ -546,6 +557,14 @@ footer{
         gap: 10px;
     }
 
+    .final{
+        min-height: 30vh;
+    }
+
+    .final h1{
+        font-size: 2.5rem !important;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -665,6 +684,10 @@ footer{
 
     .ht-card img{
         width: 100%;
+    }
+
+    .final h1{
+        font-size: 2rem !important;
     }
 
     /* Footer */
