@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Sen:wght@400..800&display=swap");
+
+:root {
+    /* Paletas de colores */
+
+    /* Azul */
+    --color-blue-900: #10404b;
+    --color-blue-800: #0e6067;
+    --color-blue-700: #0a8c91;
+    --color-blue-600: #0fcbc5;
+    --color-blue-500: #4dfff8;
+    /* Morado */
+    --color-purple-900: #0b2a43;
+    --color-purple-800: #2f436a;
+    --color-purple-700: #65639d;
+    --color-purple-600: #b18bd9;
+    --color-purple-500: #ffbbff;
+
+    /* Naranja */
+    --color-orange-900: #f5969d;
+    --color-orange-800: #f5b18e;
+    --color-orange-700: #f6d7a2;
+    --color-orange-600: #f7efce;
+    --color-orange-500: #f6efed;
+
+    /* Texto */
+    --color-font-secondary: #292929;
+}
+
+/* *{
+    border: red 1px solid;
+} */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    color: var(--color-font-secondary);
+}
+
+/* Header */
+
+header {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.eventum {
+    background: -webkit-linear-gradient(45deg, orange, purple 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.logo h1 {
+    cursor: default;
+    user-select: none;
+    font-size: 1.3rem;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.notifications-icon {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, 
+                linear-gradient(45deg, orange, purple) border-box; 
+    padding: 9px 10px 9px 10px;
+    border-radius: 50%;
+}
+
+.notifications-icon i {
+    font-size: 1.7rem;
+}
+
+.user {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, orange, purple) border-box; 
+    border-radius: 30px;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.user img {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.user h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.create-event-icon {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, 
+                linear-gradient(45deg, orange, purple) border-box; 
+    padding: 3.5px 10px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Main Section */
+
+main{
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar{
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+}
+
+.event-card{
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, 
+                linear-gradient(45deg, orange, purple) border-box; 
+}
