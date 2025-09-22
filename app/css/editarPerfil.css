@@ -223,7 +223,7 @@ input {
 
 /* Nueva contraseña oculta por defecto */
 .nueva-contraseña {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 8px;
   margin-top: 10px;

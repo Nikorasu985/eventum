@@ -8,11 +8,15 @@
 
 body, html {
   height: 100%;
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input, button{
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
 body {
-  background-image: url('../assets/bg-3.png'); /* fondo general */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -22,26 +26,16 @@ body {
 
 .container {
   display: flex;
-  width: 850px;
-  height: 500px;
-  background-color: rgba(255, 255, 255, 0.425);
-  border-radius: 12px;
+  width: 500px;
+  border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-
-/* Parte izquierda con imagen decorativa */
-.imagen {
-  flex: 2;
-  background-image: url('../assets/cine.png'); /* imagen de amigos en el cine */
-  background-size: cover;
-  background-position: center;
 }
 
 /* Parte derecha con formulario */
 .formulario {
-  flex: 1;
-  background-color: rgba(255, 255, 255, 0.);
+  background: url('../assets/bg-3.png') center/cover no-repeat; /* fondo general */
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgb(141, 141, 141);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -58,27 +52,26 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 input {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 15px;
 }
 
-button {
+button, .registro-btn {
+  border: 2px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(45deg, orange, purple) border-box;
   padding: 10px;
-  background-color: #5a4ae3;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  border-radius: 15px;
+  width: max-content  ;
 }
-
+  
 button:hover {
   background-color: #4339bd;
 }
@@ -87,25 +80,4 @@ button:hover {
   text-align: center;
   margin: 15px 0;
   color: #888;
-}
-
-.google-btn {
-  background-color: #db4437;
-  margin-bottom: 10px;
-}
-
-.registro-btn {
-  background-color: transparent;
-  border: 1px solid #5a4ae3;
-  color: #5a4ae3;
-  padding: 10px;
-  font-size: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.registro-btn:hover {
-  background-color: #5a4ae3;
-  color: #fff;
 }

@@ -91,14 +91,16 @@ header {
     gap: 20px;
 }
 
-.notifications-icon, .sidebar-icon, .user{
+.notifications-icon,
+.sidebar-icon,
+.user {
     cursor: pointer;
 }
 
 .notifications-icon {
     border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, 
-                linear-gradient(45deg, orange, purple) border-box; 
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, orange, purple) border-box;
     padding: 10px;
     width: 50px;
     height: 50px;
@@ -115,11 +117,11 @@ header {
 
 .sidebar-icon {
     border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, 
-                linear-gradient(45deg, orange, purple) border-box; 
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, orange, purple) border-box;
     padding: 10px;
     width: 50px;
-    height: 50px;   
+    height: 50px;
     border-radius: 50%;
 
     display: flex;
@@ -134,7 +136,7 @@ header {
 .user {
     border: 2px solid transparent;
     background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(45deg, orange, purple) border-box; 
+        linear-gradient(45deg, orange, purple) border-box;
     border-radius: 30px;
     padding: 5px 9px;
     display: flex;
@@ -153,52 +155,156 @@ header {
     font-size: 1.2rem;
 }
 
+/* Dropdown notificaciones */
+.notifications-dropdown {
+    position: absolute;
+    top: 70px;
+    /* debajo del header */
+    right: 120px;
+    /* ajusta según el header */
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Dropdown usuario */
+.user-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.user-dropdown button {
+    font-family: inherit;
+    border: none;
+    background: transparent;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.user-dropdown button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* fuera de la pantalla */
+    width: 300px;
+    height: 100vh;
+    background: white;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.close-sidebar {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, orange, purple) border-box;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    right: 20px;
+    cursor: pointer;
+}
+
+.sidebar.show {
+    right: 0;
+    /* se despliega */
+}
+
+.sidebar-btn{
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, orange, purple) border-box;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Main Section */
 
-main{
+main {
     display: flex;
     min-height: 100vh;
 }
 
-.main-content{
+.main-content {
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.events{
+.events {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.events > h2{
+.events>h2 {
     font-size: 1.8rem;
 }
 
-.events-title{
+.events-title {
     display: flex;
     gap: 15px;
 }
 
-.event-btn{
+.event-btn {
     border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, 
-                linear-gradient(45deg, orange, purple) border-box; 
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, orange, purple) border-box;
     padding: 5px;
     border-radius: 15px;
     text-decoration: none;
     color: black;
 }
 
-.my-events, .other-events{
+.my-events,
+.other-events {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.event-cards{
+.event-cards {
     width: 93vw;
     display: flex;
     gap: 15px;
@@ -208,11 +314,11 @@ main{
 
 }
 
-.event-card{
+.event-card {
     border: 3px solid rgba(0, 0, 0, 0.3);
     background: url("../assets/bg-1.png") center/cover no-repeat;
     border-radius: 20px;
-    padding: 10px ;
+    padding: 10px;
     width: 275px;
 
     display: flex;
@@ -220,13 +326,13 @@ main{
     align-items: center;
 }
 
-.event-img img{
+.event-img img {
     width: 250px;
-    border: 3px solid rgba(0, 0, 0, 0.2); 
+    border: 3px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
 
-.event-info{
+.event-info {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px;
     border: 1px white solid;
@@ -234,54 +340,12 @@ main{
     backdrop-filter: blur(5px);
 }
 
-.event-info h1{
+.event-info h1 {
     text-align: center;
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.event-info h2{
+.event-info h2 {
     font-size: 1.2rem;
-}
-
-/* Footer */
-
-footer{
-    padding: 20px;
-    background-image: url(../assets/bg-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    color: black;
-}
-
-.footer-section{
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border: 1px white solid;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    backdrop-filter: blur(5px);
-}
-
-.footer-section h2{
-    font-size: 1.3rem;
-}
-
-.footer-section ul{
-    list-style-type: none;
-}
-
-.footer-section a{
-    text-decoration: none;
-    color: black;
-}
-
-.footer-section a:visited{
-    color: inherit;
 }
