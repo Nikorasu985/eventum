@@ -88,18 +88,46 @@ header {
 .options {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+}
+
+.notifications-icon, .sidebar-icon, .user{
+    cursor: pointer;
 }
 
 .notifications-icon {
     border: 2px solid transparent;
     background: linear-gradient(#fff, #fff) padding-box, 
                 linear-gradient(45deg, orange, purple) border-box; 
-    padding: 9px 10px 9px 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .notifications-icon i {
+    font-size: 1.7rem;
+}
+
+.sidebar-icon {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, 
+                linear-gradient(45deg, orange, purple) border-box; 
+    padding: 10px;
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-icon i {
     font-size: 1.7rem;
 }
 
@@ -125,64 +153,36 @@ header {
     font-size: 1.2rem;
 }
 
-.create-event-icon {
-    border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, 
-                linear-gradient(45deg, orange, purple) border-box; 
-    padding: 3.5px 10px;
-    border-radius: 50%;
-    font-size: 2.5rem;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
 /* Main Section */
 
 main{
     display: flex;
-    height: 100vh;
-}
-
-.sidebar{
-    background-color: rgb(245, 245, 245);
-    display: flex;
-    flex-direction: column;
-    background-position: center;
+    min-height: 100vh;
 }
 
 .main-content{
     padding: 40px;
-}
-
-.event-card{
-    border: 3px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, 
-                linear-gradient(45deg, orange, purple) border-box; 
-    border-radius: 20px;
-    padding: 10px ;
-
     display: flex;
     flex-direction: column;
-    position: relative;
+    gap: 40px;
 }
 
-.event-info{
-    padding: 10px;
+.events{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.event-info h1{
-    text-align: center;
+.events > h2{
+    font-size: 1.8rem;
 }
 
-.event-options{
-    padding: 10px;
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
+.events-title{
+    display: flex;
+    gap: 15px;
 }
 
-.event-options a{
+.event-btn{
     border: 2px solid transparent;
     background: linear-gradient(#fff, #fff) padding-box, 
                 linear-gradient(45deg, orange, purple) border-box; 
@@ -190,4 +190,98 @@ main{
     border-radius: 15px;
     text-decoration: none;
     color: black;
+}
+
+.my-events, .other-events{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-cards{
+    width: 93vw;
+    display: flex;
+    gap: 15px;
+    overflow: auto;
+    padding: 10px;
+    border-right: 1px solid rgba(224, 224, 224, 1);
+
+}
+
+.event-card{
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    background: url("../assets/bg-1.png") center/cover no-repeat;
+    border-radius: 20px;
+    padding: 10px ;
+    width: 275px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-img img{
+    width: 250px;
+    border: 3px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 20px;
+}
+
+.event-info{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border: 1px white solid;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.event-info h1{
+    text-align: center;
+    font-size: 1.5rem ;
+    margin-bottom: 10px;
+}
+
+.event-info h2{
+    font-size: 1.2rem;
+}
+
+/* Footer */
+
+footer{
+    padding: 20px;
+    background-image: url(../assets/bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: black;
+}
+
+.footer-section{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border: 1px white solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.footer-section h2{
+    font-size: 1.3rem;
+}
+
+.footer-section ul{
+    list-style-type: none;
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-section a:visited{
+    color: inherit;
 }

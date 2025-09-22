@@ -28,19 +28,17 @@ CREATE TABLE usuarios (
 CREATE TABLE eventos (
     id_evento INT AUTO_INCREMENT PRIMARY KEY,
     id_anfitrion INT NOT NULL,
-    titulo VARCHAR(150) NOT NULL,
+    portada VARCHAR(150),
+    titulo VARCHAR(50) NOT NULL,
     descripcion TEXT,
-    lugar VARCHAR(150),
-    sitio VARCHAR(150),
-    fecha_inicio DATE,
-    hora_inicio TIME,
-    fecha_fin DATE,
-    hora_fin TIME,
+    lugar VARCHAR(50),
+    direccion VARCHAR(50),
+    fecha_hora_inicio DATETIME,
+    fecha_hora_fin DATETIME,
     tipo_presupuesto ENUM('fijo', 'sugerido') DEFAULT 'sugerido',
     presupuesto DECIMAL(10, 2),
     numero_integrantes INT DEFAULT 0,
     codigo_evento VARCHAR(20) UNIQUE,
-    fecha_limite_invitacion DATE,
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_anfitrion) REFERENCES usuarios(id_usuario)
 );
@@ -65,6 +63,7 @@ CREATE TABLE usuarios_eventos (
     id_usuario INT NOT NULL,
     id_evento INT NOT NULL,
     id_rol_evento INT NOT NULL,
+    estado_pago ENUM('pendiente', 'pagado') DEFAULT 'pendiente'
     estado_invitacion ENUM('pendiente', 'aceptado', 'rechazado') DEFAULT 'pendiente',
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     FOREIGN KEY (id_evento) REFERENCES eventos(id_evento),
@@ -81,6 +80,7 @@ CREATE TABLE solicitudes_invitacion (
     estado ENUM('pendiente', 'aceptada', 'rechazada') DEFAULT 'pendiente',
     mensaje TEXT,
     fecha_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_limite_invitacion DATE,
     FOREIGN KEY (id_evento) REFERENCES eventos(id_evento),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     UNIQUE (id_evento, id_usuario)
