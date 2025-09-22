@@ -151,8 +151,43 @@ main{
     background-position: center;
 }
 
+.main-content{
+    padding: 40px;
+}
+
 .event-card{
+    border: 3px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, 
+                linear-gradient(45deg, orange, purple) border-box; 
+    border-radius: 20px;
+    padding: 10px ;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-info{
+    padding: 10px;
+}
+
+.event-info h1{
+    text-align: center;
+}
+
+.event-options{
+    padding: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.event-options a{
     border: 2px solid transparent;
     background: linear-gradient(#fff, #fff) padding-box, 
                 linear-gradient(45deg, orange, purple) border-box; 
+    padding: 5px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
 }
