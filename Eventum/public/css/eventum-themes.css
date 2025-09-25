@@ -1,0 +1,303 @@
+/* ========================================
+   EVENTUM - TEMAS Y ESTILOS
+   ======================================== */
+
+/* Variables CSS Base */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #808080;
+    --border-color: #333333;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --success-color: #00ff88;
+    --warning-color: #ff8c00;
+    --danger-color: #ff0040;
+    --info-color: #00d4ff;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
+    --gradient-success: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    --gradient-warning: linear-gradient(135deg, #ff8c00 0%, #ff0040 100%);
+    --gradient-danger: linear-gradient(135deg, #ff0040 0%, #ff8c00 100%);
+}
+
+/* Modo Claro */
+[data-dark-mode="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --info-color: #0ea5e9;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+/* ========================================
+   TEMAS ESPECÍFICOS
+   ======================================== */
+
+/* Tema Neon */
+[data-theme="neon"] {
+    --primary-color: #00ff88;
+    --secondary-color: #00d4ff;
+    --accent-color: #ff0080;
+    --success-color: #00ff88;
+    --warning-color: #ff8c00;
+    --danger-color: #ff0040;
+    --gradient-primary: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    --gradient-secondary: linear-gradient(135deg, #00d4ff 0%, #ff0080 100%);
+    --gradient-accent: linear-gradient(135deg, #ff0080 0%, #00ff88 100%);
+    --gradient-success: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    --gradient-warning: linear-gradient(135deg, #ff8c00 0%, #ff0040 100%);
+    --gradient-danger: linear-gradient(135deg, #ff0040 0%, #ff8c00 100%);
+}
+
+[data-theme="neon"][data-dark-mode="light"] {
+    --primary-color: #00d4aa;
+    --secondary-color: #00a8cc;
+    --accent-color: #ff6b6b;
+    --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #00a8cc 100%);
+    --gradient-secondary: linear-gradient(135deg, #00a8cc 0%, #ff6b6b 100%);
+    --gradient-accent: linear-gradient(135deg, #ff6b6b 0%, #00d4aa 100%);
+}
+
+/* Tema Cyber */
+[data-theme="cyber"] {
+    --primary-color: #00ff41;
+    --secondary-color: #00d4aa;
+    --accent-color: #ff0040;
+    --success-color: #00ff41;
+    --warning-color: #ff8c00;
+    --danger-color: #ff0040;
+    --gradient-primary: linear-gradient(135deg, #00ff41 0%, #00d4aa 100%);
+    --gradient-secondary: linear-gradient(135deg, #00d4aa 0%, #ff0040 100%);
+    --gradient-accent: linear-gradient(135deg, #ff0040 0%, #00ff41 100%);
+    --gradient-success: linear-gradient(135deg, #00ff41 0%, #00d4aa 100%);
+    --gradient-warning: linear-gradient(135deg, #ff8c00 0%, #ff0040 100%);
+    --gradient-danger: linear-gradient(135deg, #ff0040 0%, #ff8c00 100%);
+}
+
+[data-theme="cyber"][data-dark-mode="light"] {
+    --primary-color: #0066cc;
+    --secondary-color: #4444cc;
+    --accent-color: #00cc66;
+    --gradient-primary: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    --gradient-secondary: linear-gradient(135deg, #4444cc 0%, #3333aa 100%);
+    --gradient-accent: linear-gradient(135deg, #00cc66 0%, #00aa44 100%);
+}
+
+/* Tema Futurista */
+[data-theme="futurista"] {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --success-color: #667eea;
+    --warning-color: #764ba2;
+    --danger-color: #f093fb;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
+    --gradient-success: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-warning: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+    --gradient-danger: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
+}
+
+[data-theme="futurista"][data-dark-mode="light"] {
+    --primary-color: var(--text-primary);
+    --secondary-color: var(--text-secondary);
+    --accent-color: var(--text-muted);
+    --gradient-primary: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--text-secondary) 0%, var(--text-muted) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--text-muted) 0%, var(--text-primary) 100%);
+}
+
+/* Tema Minimalista */
+[data-theme="minimalista"] {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --success-color: #667eea;
+    --warning-color: #764ba2;
+    --danger-color: #f093fb;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
+    --gradient-success: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-warning: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+    --gradient-danger: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
+}
+
+[data-theme="minimalista"][data-dark-mode="light"] {
+    --primary-color: var(--text-primary);
+    --secondary-color: var(--text-secondary);
+    --accent-color: var(--text-muted);
+    --gradient-primary: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--text-secondary) 0%, var(--text-muted) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--text-muted) 0%, var(--text-primary) 100%);
+}
+
+
+/* ========================================
+   REGLAS ESPECÍFICAS PARA ICONOS
+   ======================================== */
+
+/* Iconos de botones blancos en modo claro - TODOS los temas */
+[data-dark-mode="light"] .btn .fas.fa-plus,
+[data-dark-mode="light"] .btn .fas.fa-key,
+[data-dark-mode="light"] .btn .fas.fa-calendar,
+[data-dark-mode="light"] .btn .fas.fa-cog,
+[data-dark-mode="light"] .btn .fas.fa-chart-bar,
+[data-dark-mode="light"] .btn .fas.fa-list,
+[data-dark-mode="light"] .btn .fas.fa-calendar-plus,
+[data-dark-mode="light"] .btn .fas.fa-calendar-alt,
+[data-dark-mode="light"] .btn .fas.fa-plus-circle,
+[data-dark-mode="light"] .btn .fas.fa-plus-square {
+    color: white !important;
+}
+
+/* Iconos del dashboard negros en modo claro */
+[data-dark-mode="light"] .card .fas.fa-calendar,
+[data-dark-mode="light"] .card .fas.fa-users,
+[data-dark-mode="light"] .card .fas.fa-envelope,
+[data-dark-mode="light"] .card .fas.fa-bell,
+[data-dark-mode="light"] .card .fas.fa-plus,
+[data-dark-mode="light"] .card .fas.fa-user-friends,
+[data-dark-mode="light"] .card .fas.fa-envelope-open,
+[data-dark-mode="light"] .stat-icon .fas.fa-calendar,
+[data-dark-mode="light"] .stat-icon .fas.fa-users,
+[data-dark-mode="light"] .stat-icon .fas.fa-envelope,
+[data-dark-mode="light"] .stat-icon .fas.fa-bell,
+[data-dark-mode="light"] .fas.fa-calendar-plus,
+[data-dark-mode="light"] .fas.fa-calendar-alt,
+[data-dark-mode="light"] .fas.fa-calendar-check {
+    color: #212529 !important;
+}
+
+
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+/* Gradientes de texto */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Fallback para navegadores que no soportan background-clip */
+@supports not (-webkit-background-clip: text) {
+    .gradient-text {
+        color: var(--primary-color) !important;
+        background: none !important;
+    }
+    .gradient-text-secondary {
+        color: var(--secondary-color) !important;
+        background: none !important;
+    }
+    .gradient-text-accent {
+        color: var(--accent-color) !important;
+        background: none !important;
+    }
+}
+
+/* Modo claro - gradientes de texto */
+[data-dark-mode="light"] .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--text-primary) !important; /* Fallback color */
+}
+
+[data-dark-mode="light"] .gradient-text-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--text-primary) !important; /* Fallback color */
+}
+
+[data-dark-mode="light"] .gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--text-primary) !important; /* Fallback color */
+}
+
+/* Botones activos */
+.nav-link.active {
+    color: white !important;
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.nav-link.active i {
+    color: white !important;
+}
+
+.estilo-btn.active {
+    border-color: var(--primary-color);
+    background: var(--gradient-primary);
+    color: white !important;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    transform: scale(1.1);
+}
+
+.estilo-btn.active i {
+    color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .estilos-rapidos-flotantes {
+        right: 10px;
+        gap: 8px;
+    }
+    
+    .estilo-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .estilos-rapidos-flotantes {
+        right: 5px;
+        gap: 6px;
+    }
+    
+    .estilo-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
