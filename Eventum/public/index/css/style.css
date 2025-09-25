@@ -172,7 +172,7 @@ nav a:first-of-type:hover {
 
 .hero-info h1 {
     color: var(--color-font-main);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .hero-section p {
@@ -234,7 +234,7 @@ nav a:first-of-type:hover {
 }
 
 .features-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 60px;
 }
 
@@ -271,7 +271,7 @@ nav a:first-of-type:hover {
 }
 
 .card-info h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: rgba(255, 255, 255, 0.4);
     border: white 1px solid;
     border-radius: 10px;
@@ -280,7 +280,7 @@ nav a:first-of-type:hover {
 }
 
 .card-info p{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 /* Ideas Section */
